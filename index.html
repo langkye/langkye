@@ -1,0 +1,1390 @@
+<!doctype html>
+<html style='font-size:24px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix { height: auto; margin-top: 16px; margin-bottom: 16px; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+:root {
+    --monospace: "JetBrains Mono", HYZhengYuan, "Fira Code", Menlo, "Ubuntu Mono", Consolas; /*code font*/
+    --text-font: var(--monospace); /*default font*/
+    --title-font: var(--monospace); /*title font*/
+
+    --bg-color: #282838;
+    --text-color: #acb7c4;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #1d1d26;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --md-char-color: #535455;
+    --side-bar-bg-color: var(--bg-color);
+    --search-select-bg-color: #ffffff;
+    --search-select-text-color: var(--bg-color);
+    --select-text-bg-color: #3473B068;
+    --window-border: 1px solid #282828;
+
+    --drake-accent: #904ac2;
+    --drake-highlight: #b160ea;
+    --a-color: var(--drake-highlight);
+    --variable-color: var(--drake-highlight);
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: var(--item-hover-bg-color);
+    --code-block-color: #A9B7C6;
+    --title-color: #bbc6d2;
+    --blockquote-border-color: var(--drake-accent);
+    --blockquote-color: var(--text-color);
+    --blockquote-bg-color: rgba(25, 25, 49, 0.53);
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--drake-highlight);
+    --height-light-border-color: var(--drake-highlight);
+    --yaml-color: #676773;
+    --yaml-bg-color: var(--code-block-bg-color);
+    --footnotes-bg-color: var(--item-hover-bg-color);
+    --footnotes-highlight: #FFD760;
+    --table-border-color: var(--item-hover-bg-color);
+    --table-header-bg-color: #2c2c47;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: var(--table-header-bg-color);
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23acb7c4'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*code block*/
+#write .md-fences {
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 2px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: none;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 2px;
+    color: var(--drake-highlight);
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+#write a .md-plain, .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+a:any-link {
+    color: var(--a-color);
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2.md-end-block.md-heading {
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+h2.md-end-block.md-heading:after {
+    display: block;
+    content: '';
+    height: 2px;
+    margin-top: 4px;
+    background-color: var(--h2-underline-color);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    vertical-align: top;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+#typora-sidebar {
+    font-size: 1.1rem;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: 1rem;
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA darcula theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: var(--code-block-bg-color);
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-meta {
+    color: #BBB529;
+}
+
+.cm-s-inner span.cm-number {
+    color: #6897BB;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #CC7832;
+}
+
+.cm-s-inner span.cm-def {
+    color: #FFD760;
+}
+
+.cm-s-inner span.cm-variable {
+    color: #A9B7C6;
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #A9B7C6;
+}
+
+.cm-s-inner span.cm-variable-3 {
+    color: #9876AA;
+}
+
+.cm-s-inner span.cm-type {
+    color: #AABBCC;
+}
+
+.cm-s-inner span.cm-property {
+    color: #FFC66D;
+}
+
+.cm-s-inner span.cm-operator {
+    color: #A9B7C6;
+}
+
+.cm-s-inner span.cm-string {
+    color: #6A8759;
+}
+
+.cm-s-inner span.cm-string-2 {
+    color: #6A8759;
+}
+
+.cm-s-inner span.cm-comment {
+    color: #787878;
+}
+
+.cm-s-inner span.cm-link {
+    color: #CC7832;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #CC7832;
+}
+
+.cm-s-inner span.cm-error {
+    color: #BC3F3C;
+}
+
+.cm-s-inner span.cm-tag {
+    color: #E8BF6A;
+}
+
+.cm-s-inner span.cm-quote {
+    color: #a6e22e;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #9876AA;
+}
+
+.cm-s-inner span.cm-qualifier {
+    color: #6A8759;
+}
+
+.cm-s-inner span.cm-bracket {
+    color: #E8BF6A;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #FF9E59;
+}
+
+.cm-s-inner span.cm-special {
+    color: #FF9E59;
+}
+
+.cm-s-inner span.cm-matchhighlight {
+    color: #FFFFFF;
+    background-color: rgba(50, 89, 48, .7);
+    font-weight: normal;
+}
+
+.cm-s-inner span.cm-searching {
+    color: #FFFFFF;
+    background-color: rgba(61, 115, 59, .7);
+    font-weight: normal;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    border-right: none;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    background: var(--bg-color);
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    background-color: #3B514D;
+    color: #FFEF28 !important;
+}
+
+.cm-s-inner .CodeMirror-selected {
+    background: #214283 !important;
+}
+
+.cm-s-inner .CodeMirror-selectedtext {
+    background: #214283 !important;
+}
+
+.cm-s-typora-default .CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+
+.cm-overlay.CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+
+.cm-s-inner div.CodeMirror-cursor {
+    border-left: 1px solid var(--code-block-color);
+}
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>环境搭建</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><p><a href='https://blog.icymint.me/'><span>云淡风轻</span></a></p><p><a href='https://blog.icymint.me/posts'><span>博客</span></a><a href='https://blog.icymint.me/archive'><span>归档</span></a><a href='https://github.com/leptonyu'><span>GitHub</span></a></p><h1 id='spring-cloud-微服务项目构建'><a href='https://blog.icymint.me/posts/20200602/'><span>Spring Cloud 微服务项目构建</span></a></h1><p><span>2020-06-22 :: Daniel YU</span></p><p><span>#</span><a href='https://blog.icymint.me/tags/java/'><span>Java</span></a><span> #</span><a href='https://blog.icymint.me/tags/spring/'><span>Spring</span></a><span> #</span><a href='https://blog.icymint.me/tags/spring-boot/'><span>Spring Boot</span></a><span> #</span><a href='https://blog.icymint.me/tags/spring-cloud/'><span>Spring Cloud</span></a><span> #</span><a href='https://blog.icymint.me/tags/microservices/'><span>MicroServices</span></a><span> </span></p><p><span>本文用于记录搭建基于Spring Cloud的微服务项目的架构骨架。基础构建工具使用Gradle/KotlinSDL，Java版本为11，微服务框架Spring Cloud。项目构建只考虑统一语言、统一框架的前提下构建，因此所有的微服务代码都置于同一个git仓库中，因此需要启用多模块的Gradle项目。</span></p><ol><li><a href='https://blog.icymint.me/posts/20200602/#构建工具'><span>构建工具</span></a></li><li><a href='https://blog.icymint.me/posts/20200602/#项目基本结构'><span>项目基本结构</span></a></li><li><a href='https://blog.icymint.me/posts/20200602/#服务基础组件'><span>服务基础组件</span></a></li><li><a href='https://blog.icymint.me/posts/20200602/#第三方starter'><span>第三方starter</span></a></li><li><a href='https://blog.icymint.me/posts/20200602/#代码规范'><span>代码规范</span></a></li><li><a href='https://blog.icymint.me/posts/20200602/#git工作流'><span>Git工作流</span></a></li><li><a href='https://blog.icymint.me/posts/20200602/#ci和cd'><span>基于Gitlab的CI和CD</span></a></li></ol><h3 id='构建工具'><span>构建工具</span></h3><p><span>项目构建工具采用Gradle 6.5/KotlinSDL，Java 11。构建脚本分为三个文件：</span></p><ol><li><span>settings.gradle.kts</span></li><li><span>build.gradle.kts</span></li><li><span>gradle.properties</span></li></ol><h5 id='settingsgradlekts'><span>settings.gradle.kts</span></h5><p><span>该文件主要负责插件管理和项目导入，样例代码如下：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="kotlin" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1162.9375px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// 插件管理</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">pluginManagement</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">// 替换官方源，毕竟离得近下载的更快</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">repositories</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">maven</span>(<span class="cm-variable">url</span> <span class="cm-operator">=</span> <span class="cm-string">"https://maven.aliyun.com/nexus/content/groups/public/"</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-comment">// 修复阿里云maven仓库实际是http协议的问题。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">isAllowInsecureProtocol</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-comment">// 插件官方源</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">gradlePluginPortal</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">// 该配置中把插件的版本统一放置到gradle.properties文件管理</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">map</span> <span class="cm-operator">=</span> <span class="cm-variable">mapOf</span>(</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">"org.springframework.boot"</span> <span class="cm-variable">to</span> <span class="cm-string">"springBootVersion"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">"io.spring.dependency-management"</span> <span class="cm-variable">to</span> <span class="cm-string">"springDependencyVersion"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    )</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">resolutionStrategy</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">eachPlugin</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">map</span>.<span class="cm-keyword">get</span>(<span class="cm-variable">requested</span>.<span class="cm-variable">id</span>.<span class="cm-variable">id</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">                    <span class="cm-operator">?</span>.<span class="cm-variable">let</span> { <span class="cm-variable">useVersion</span>(<span class="cm-variable">gradle</span>.<span class="cm-variable">rootProject</span>.<span class="cm-variable">extra</span>[<span class="cm-variable">it</span>] <span class="cm-keyword">as</span> <span class="cm-variable-3">String</span>) }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//项目导入</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">include</span>(</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 基础公用代码</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"base-dto"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 基础starters，多个</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"base-starter"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 第三方starters，多个</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"third-starter-xxx"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 通用服务</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"config-war"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"gateway-war"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 项目模块</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"user-dto"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"user-client"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string">"user-war"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 其他项目模块</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 1394px;"></div><div class="CodeMirror-gutters" style="display: none; height: 1394px;"></div></div></div></pre><p><span>Copy</span></p><h5 id='buildgradlekts'><span>build.gradle.kts</span></h5><p><span>该文件主要负责Gradle构建相关的所有内容，不同于Maven，Gradle可以很方便的编写自定义任务。</span></p><ol><li><span>首先考虑的是插件声明以及版本的导入：</span></li></ol><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="kotlin" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1321.87890625px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//插件声明但不导入，后面按需apply。</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">plugins</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">id</span>(<span class="cm-string">"org.springframework.boot"</span>) <span class="cm-variable">apply</span> <span class="cm-atom">false</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">id</span>(<span class="cm-string">"io.spring.dependency-management"</span>) <span class="cm-variable">apply</span> <span class="cm-atom">false</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//从gradle.properties导入版本信息，这些变量可以用于settings.gradle.kts。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">springCloudVersion</span>: <span class="cm-variable-3">String</span> <span class="cm-keyword">by</span> <span class="cm-variable">project</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">springBootVersion</span>: <span class="cm-variable-3">String</span> <span class="cm-keyword">by</span> <span class="cm-variable">project</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">springVersion</span>: <span class="cm-variable-3">String</span> <span class="cm-keyword">by</span> <span class="cm-variable">project</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">lombokVersion</span>: <span class="cm-variable-3">String</span> <span class="cm-keyword">by</span> <span class="cm-variable">project</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//版本解析，同时自动从GitLab-ci的环境变量读取、或者从本地git目录读取commitid。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">rawVersion</span>: <span class="cm-variable-3">String</span> <span class="cm-keyword">by</span> <span class="cm-variable">project</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">revision</span> <span class="cm-operator">=</span> <span class="cm-variable-3">System</span>.<span class="cm-variable">getenv</span>(<span class="cm-string">"CI_COMMIT_SHORT_SHA"</span>) <span class="cm-operator">?</span>: <span class="cm-variable">runCmd</span>(<span class="cm-string">"git rev-parse --short HEAD"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">allprojects</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">version</span> <span class="cm-operator">=</span> <span class="cm-variable">rawVersion</span> <span class="cm-operator">+</span> (<span class="cm-keyword">if</span> (<span class="cm-variable">isRelease</span>()) <span class="cm-string">"-RELEASE"</span> <span class="cm-keyword">else</span> <span class="cm-string">"-SNAPSHOT"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">task</span>(<span class="cm-string">"printVersion"</span>) { <span class="cm-variable">doLast</span> { <span class="cm-variable">println</span>(<span class="cm-variable">version</span>) } }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">task</span>(<span class="cm-string">"printRevision"</span>) { <span class="cm-variable">doLast</span> { <span class="cm-variable">println</span>(<span class="cm-variable">revision</span>) } }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 680px;"></div><div class="CodeMirror-gutters" style="display: none; height: 680px;"></div></div></div></pre><p><span>Copy</span></p><p><span>函数</span><code>isRelease</code><span>可以用于判定版本的有效性，包含格式以及和git分支/标签名称的匹配情况。</span></p><ol><li><span>所有子项目的配置</span></li></ol><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="kotlin" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1379.67578125px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">subprojects</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">//统一激活子项目插件，此处设置可以排除rootProject作为一个java项目。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">apply</span>(<span class="cm-variable">plugin</span> <span class="cm-operator">=</span> <span class="cm-string">"java"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">apply</span>(<span class="cm-variable">plugin</span> <span class="cm-operator">=</span> <span class="cm-string">"java-library"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">apply</span>(<span class="cm-variable">plugin</span> <span class="cm-operator">=</span> <span class="cm-string">"idea"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">apply</span>(<span class="cm-variable">plugin</span> <span class="cm-operator">=</span> <span class="cm-string">"io.spring.dependency-management"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">//设置基础JDK版本和编码</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">tasks</span>.<span class="cm-variable">withType</span><span class="cm-operator">&lt;</span><span class="cm-variable">JavaCompile</span><span class="cm-operator">&gt;</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">options</span>.<span class="cm-variable">encoding</span> <span class="cm-operator">=</span> <span class="cm-string">"UTF-8"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">sourceCompatibility</span> <span class="cm-operator">=</span> <span class="cm-variable">JavaVersion</span>.<span class="cm-variable">VERSION_11</span>.<span class="cm-variable">toString</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">targetCompatibility</span> <span class="cm-operator">=</span> <span class="cm-variable">JavaVersion</span>.<span class="cm-variable">VERSION_11</span>.<span class="cm-variable">toString</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">//项目的Maven仓库</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">repositories</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">maven</span>(<span class="cm-variable">url</span> <span class="cm-operator">=</span> <span class="cm-string">"https://maven.aliyun.com/nexus/content/groups/public/"</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">isAllowInsecureProtocol</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">maven</span>(<span class="cm-variable">url</span> <span class="cm-operator">=</span> <span class="cm-string">"https://repo.spring.io/milestone"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">mavenCentral</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">//针对Spring项目的版本管理，可以导入所有Spring管理的库版本号。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">configure</span><span class="cm-operator">&lt;</span><span class="cm-variable">DependencyManagementExtension</span><span class="cm-operator">&gt;</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">imports</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">mavenBom</span>(<span class="cm-string">"org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">mavenBom</span>(<span class="cm-string">"org.springframework.boot:spring-boot-dependencies:$springBootVersion"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">mavenBom</span>(<span class="cm-string">"org.springframework:spring-framework-bom:$springVersion"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">// 剩下子项目配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 1122px;"></div><div class="CodeMirror-gutters" style="display: none; height: 1122px;"></div></div></div></pre><p><span>Copy</span></p><h5 id='gradleproperties'><span>gradle.properties</span></h5><p><span>该文件主要配置版本信息以及一些编译参数</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="properties"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="properties"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 975.09375px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">group</span>=<span class="cm-quote">your.company</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">rawVersion</span>=<span class="cm-quote">1.0.0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">org.gradle.jvmargs</span>=<span class="cm-quote">-Xms128m -Xmx1024m -XX</span>:<span class="cm-quote">+CMSClassUnloadingEnabled</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">springVersion</span>=<span class="cm-quote">5.2.6.RELEASE</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">springBootVersion</span>=<span class="cm-quote">2.3.0.RELEASE</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">springCloudVersion</span>=<span class="cm-quote">2020.0.0-M2</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">springDependencyVersion</span>=<span class="cm-quote">1.0.9.RELEASE</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def">lombokVersion</span>=<span class="cm-quote">1.18.12</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 340px;"></div><div class="CodeMirror-gutters" style="display: none; height: 340px;"></div></div></div></pre><p><span>Copy</span></p><h3 id='项目基本结构'><span>项目基本结构</span></h3><p><span>Gradle灵活的SDL可以让我们方便的对项目模块根据名称进行归类。 如前面</span><code>settings.gradle.kts</code><span>文件中加载的模块那样，我对项目的模块通过名称进行了划分。每个模块的名字都以字母单词和横杠</span><code>-</code><span>作为分隔符组成，大概包括几类：</span><code>base-**</code><span>、</span><code>base-starter-**</code><span>、</span><code>third-starter-**</code><span>、</span><code>*-dto</code><span>、</span><code>*-client</code><span>、</span><code>*-war</code><span>。</span></p><h5 id='全局公共类库base-dto'><span>全局公共类库：</span><code>base-dto</code></h5><p><span>全局公共类库用于放置所有模块都依赖的公共类。一些公用定义类、工具类等均可放在这里。</span></p><h5 id='全局starter公共类库base-starter'><span>全局starter公共类库：</span><code>base-starter</code></h5><p><span>starter公共类库用于放置所有模块都需要加载的starter配置。</span></p><h5 id='基础startersbase-starter-'><span>基础starters：</span><code>base-starter-**</code></h5><p><span>基础类starter用于简单包装spring-boot提供的starters，或者增加自己的工具层。一般属于那些存在一定的定制需求，并且不是每个项目都需要的模块。例如Job配置模块、Cache配置模块、消息配置模块、数据库配置模块、RPC配置模块等。某些简单的项目，例如验证码服务只需要Cache即可。因此每个实际的业务项目可能需要依赖的starters是不同的。项目架构上，应当尽量控制依赖的数量和质量，为后续项目的变更处理减少障碍（项目的变更原因可能是JDK升级、框架升级或者bug导致的升级）。Gradle脚本可以自动为基础starters添加通用的依赖（base-dto和bast-starter），这两个模块是开发starter必备的，同时也可以减少通用依赖分散在每个starter项目中，从而减轻开发和管理成本。</span></p><p><span>Gradle脚本配置示例如下：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="kotlin"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 743.90625px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">subprojects</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">//其他配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">startsWith</span>(<span class="cm-string">"base-starter-"</span>)) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">dependencies</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">api</span>(<span class="cm-variable">project</span>(<span class="cm-string">":base-dto"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">api</span>(<span class="cm-variable">project</span>(<span class="cm-string">":base-starter"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">//其他配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 340px;"></div><div class="CodeMirror-gutters" style="display: none; height: 340px;"></div></div></div></pre><p><span>Copy</span></p><h5 id='第三方starters-third-starter-'><span>第三方starters: </span><code>third-starter-**</code></h5><p><span>第三方starter用于对接第三方服务。通常第三方服务都提供了http的api，因此可以统一手工对接API。采用的方式可以是RestTemplate或者Feign等，后者可以和Spring Cloud一起统一管理。有一些特例，例如aliyun的API很多，并且提供了较高质量的SDK，则可以采用直接依赖SDK的方式。大多数第三方服务的sdk均比较垃圾，不建议直接导入依赖。否则可能加重后续升级变更的风险，同时会破坏项目的代码规范或者配置规范等。第三方服务模块没有一定依赖的模块，因此依赖部分自定义。</span></p><h5 id='项目的模块的划分-dto-client-war'><span>项目的模块的划分：</span><code>**-dto</code><span>、</span><code>**-client</code><span>、</span><code>**-war</code></h5><p><span>项目模块可以划分成dto、client、war三个模块，对于想要更进一步划分的情况，可以对war进行dao、service、controller的拆分。这里我仅考虑分成三个模块。其中dto主要负责编写数据传输对象、以及一些通用接口，一般这些内容是client和war同时需要用到的。war模块是业务项目的主要模块，负责从dao到controller层的所有代码，模块内部需要进行逻辑分层，以便后续根据业务需求进行拆分。client模块则提供了统一的客户端调用代码。我用的是Spring Cloud Feign，因此该模块主要用Feign编写一些客户端接口。client和war不能相互引用，他们的关系是调用方和实现方。一般client被其他项目的war引用，可以直接提供java实例来进行远程调用。Client层的抽象可以方便后续进行RPC的变更，而不用影响业务模块。</span></p><p><span>Gradle脚本配置示例如下：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="kotlin" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1307.4296875px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">subprojects</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">//其他配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">endsWith</span>(<span class="cm-string">"-dto"</span>)) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">dependencies</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">api</span>(<span class="cm-variable">project</span>(<span class="cm-string">":base-dto"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">endsWith</span>(<span class="cm-string">"-client"</span>)) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">dependencies</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">api</span>(<span class="cm-variable">project</span>(<span class="cm-string">":"</span> <span class="cm-operator">+</span> <span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">replace</span>(<span class="cm-string">"-client$"</span>, <span class="cm-string">"-dto"</span>)))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">implementation</span>(<span class="cm-variable">project</span>(<span class="cm-string">":base-starter-client"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">endsWith</span>(<span class="cm-string">"-war"</span>)) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">dependencies</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">api</span>(<span class="cm-variable">project</span>(<span class="cm-string">":"</span> <span class="cm-operator">+</span> <span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">replace</span>(<span class="cm-string">"-war$"</span>, <span class="cm-string">"-dto"</span>)))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-comment">//如果统一采用的是webflux，则可以更改此依赖。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">implementation</span>(<span class="cm-variable">project</span>(<span class="cm-string">":base-starter-web"</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-comment">//war需要依赖的运行时代码</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">runtimeOnly</span>(<span class="cm-string">"org.springframework.cloud:spring-cloud-starter-sleuth"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">runtimeOnly</span>(<span class="cm-string">"org.springframework.boot:spring-boot-starter-actuator"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">runtimeOnly</span>(<span class="cm-string">"io.micrometer:micrometer-registry-prometheus"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">runtimeOnly</span>(<span class="cm-string">"org.springframework.cloud:spring-cloud-starter-consul-discovery"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-comment">//其他war配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">//其他配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 952px;"></div><div class="CodeMirror-gutters" style="display: none; height: 952px;"></div></div></div></pre><p><span>Copy</span></p><p><span>对于war模块，其还需要提供额外的插件，以及一些更进一步的通用配置，可以在</span><code>其他war配置</code><span>中配置如下代码</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="kotlin" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="kotlin"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1032.890625px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">subprojects</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">//其他配置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable">project</span>.<span class="cm-variable">name</span>.<span class="cm-variable">endsWith</span>(<span class="cm-string">"-war"</span>)) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">apply</span>(<span class="cm-variable">plugin</span> <span class="cm-operator">=</span> <span class="cm-string">"org.springframework.boot"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-comment">//针对数据库项目的定制</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">if</span> (<span class="cm-variable">isSupportDatabase</span>()) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">          <span class="cm-variable">apply</span>(<span class="cm-variable">plugin</span> <span class="cm-operator">=</span> <span class="cm-string">"org.flywaydb.flyway"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">          <span class="cm-variable">tasks</span>.<span class="cm-variable">withType</span><span class="cm-operator">&lt;</span><span class="cm-variable">org</span>.<span class="cm-variable">flywaydb</span>.<span class="cm-variable">gradle</span>.<span class="cm-variable">task</span>.<span class="cm-variable">AbstractFlywayTask</span><span class="cm-operator">&gt;</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-comment">//flyway定制</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">          }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">tasks</span>.<span class="cm-variable">withType</span><span class="cm-operator">&lt;</span><span class="cm-variable">BootRun</span><span class="cm-operator">&gt;</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">          <span class="cm-comment">//对bootRun任务的定制</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">//其他配置</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 612px;"></div><div class="CodeMirror-gutters" style="display: none; height: 612px;"></div></div></div></pre><p><span>Copy</span></p><h3 id='服务基础组件'><span>服务基础组件</span></h3><p><span>服务基础组件包括</span><code>base-starter-client</code><span>、</span><code>base-starter-db</code><span>、</span><code>base-starter-job</code><span>、</span><code>base-starter-mq</code><span>、</span><code>base-starter-redis</code><span>、</span><code>base-starter-web</code><span>等。其中client用于微服务间调用相关组件。其余模块则主要是数据库、Job、Web相关构件。</span></p><h5 id='微服务调用组件base-starter-client'><span>微服务调用组件：</span><code>base-starter-client</code></h5><p><span>其直接依赖</span><code>org.springframework.cloud:spring-cloud-starter-openfeign</code><span>，主要做一些调用相关的定制。 例如，内部调用增加安全校验；对返回结果做一些处理；负载均衡定制等。</span></p><h5 id='数据库组件base-starter-db'><span>数据库组件：</span><code>base-starter-db</code></h5><p><span>数据库组件主要用于定制数据库相关的配置。例如：分页插件、flyway定制、内存数据库定制等。我这边对内存数据库采用Profile管理，提供了</span><code>BasicFlywayAutoConfiguration</code><span>用于配置local模式下启动内存数据库的功能，方便开发时使用。实际部署环境则因为Profile不是local的，所以不会加载该类。依赖关系上，对flyway的依赖应当排除在打包阶段。</span></p><p><span>分页插件的逻辑很简单，业务开发人员应当尽可能低的改动代码。这里我没有选择第三方库，而是自己实现了MyBatis插件。Mapper层的编写对开发人员无感，即如果要求查询分页，直接提供一个</span><code>RowBounds</code><span>的参数即可。由分页插件完成对</span><code>RowBounds</code><span>的重新配置。具体的，提供一个继承</span><code>RowBounds</code><span>的类</span><code>PageableBounds</code><span>，该类主要功能为：</span></p><ol><li><span>扩展RowBounds，提供</span><code>pageSize</code><span>、</span><code>pageNo</code><span>到</span><code>offset</code><span>、</span><code>limit</code><span>的转换。API仅支持</span><code>page</code><span>参数，不支持</span><code>offset</code><span>模式。</span></li><li><span>提供了排序相关的参数，可以扩展API层面排序的功能。</span></li><li><span>提供了回传总记录数的字段，mapper调用后把总记录数写入该字段，在Spring MVC层可以通过</span><code>PageableBounds</code><span>的引用直接得到total值。而不需要在返回的</span><code>List</code><span>中获取。一般的业务开发过程中可能对</span><code>List</code><span>加以改造，因此有可能破坏调用返回的</span><code>List</code><span>结果。</span></li></ol><p><span>分页插件在Spring MVC层可以增加注解，用于方便的定制可排序字段、修改默认分页大小等功能，并且可以配合Swagger提供合适的API文档。</span></p><p><span>其他的定制还包括SQL模板类、</span><code>TypeHandler</code><span>定制等。</span></p><p><span>除此以外，可以对项目中的SQL脚本进行严格的版本控制，其通过扩展Gradle编译任务来实现。</span></p><p><span>SQL代码需要在编译过程中自动测试运行。</span></p><h5 id='job组件base-starter-job'><span>Job组件：</span><code>base-starter-job</code></h5><p><span>简单的Job组件，直接基于</span><code>org.springframework.scheduling.TaskScheduler</code><span>。我为job模块定制按Profile加载的方案，即</span><code>BasicJobAutoConfiguration</code><span>配置只有在ActiveProfiles中包含了</span><code>job</code><span>的Profile才可以加载。这样做的好处是，同一个war项目既包括web组件又包括job组件。并且可以根据Profile是否包含job，提供两种运行方案。部署的模式为一个</span><code>xxx-war</code><span>可以提供多个</span><code>xxx-server</code><span>实例和一个</span><code>xxx-job</code><span>实例运行。绝大部分Job和web依赖相同的代码逻辑，因此简单的Job方案是合理的。</span></p><p><span>具体的功能上，对于Job需要附加一些额外的组件：对链路跟踪的支持、对优雅停机的支持、对Job模式的抽象等。</span></p><ol><li><span>对链路跟踪的支持，提供了一个</span><code>JobService</code><span>对</span><code>ScheduledTaskRegistrar</code><span>进行额外的包装，把链路跟踪信息加到每一个Job的运行时。</span></li><li><span>由于大多数Job都是对记录的依次处理，因此提供了统一个Job抽象，包含</span><code>SimpleBatchJob</code><span>和</span><code>BatchJob</code><span>。</span></li></ol><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="java" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 816.15625px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">interface</span> <span class="cm-def">SimpleBatchJob</span><span class="cm-operator">&lt;</span><span class="cm-variable">E</span><span class="cm-operator">&gt;</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">List</span><span class="cm-operator">&lt;</span><span class="cm-variable">E</span><span class="cm-operator">&gt;</span> <span class="cm-variable">getRecords</span>(<span class="cm-variable">Pageable</span> <span class="cm-variable">pageable</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-3">void</span> <span class="cm-variable">handle</span>(<span class="cm-variable-3">String</span> <span class="cm-variable">jobName</span>, <span class="cm-variable">E</span> <span class="cm-variable">record</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">default</span> <span class="cm-variable-3">boolean</span> <span class="cm-variable">exitOnceRecordFailed</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">return</span> <span class="cm-atom">false</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">interface</span> <span class="cm-def">BatchJob</span><span class="cm-operator">&lt;</span><span class="cm-variable">E</span><span class="cm-operator">&gt;</span> <span class="cm-keyword">extends</span> <span class="cm-variable">SimpleBatchJob</span><span class="cm-operator">&lt;</span><span class="cm-variable">E</span><span class="cm-operator">&gt;</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable-3">void</span> <span class="cm-variable">updateNextScanTime</span>(<span class="cm-variable">E</span> <span class="cm-variable">record</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 544px;"></div><div class="CodeMirror-gutters" style="display: none; height: 544px;"></div></div></div></pre><p><span>Copy</span></p><p><code>SimpleBatchJob</code><span>用于对Job按分页从第1页到第N页进行处理；</span><code>BatchJob</code><span>则是对Job每次进行未处理的记录查询，每次查出来的是最优先的需要进行批处理的记录，</span><code>updateNextScanTime</code><span>用于更新扫描时间戳，防止因无法处理导致的死循环。</span></p><ol><li><span>以上两种模式执行时，对每条记录的处理都加入了是否退出的判断，用于Job需要关闭的时候自动退出Job实现优雅停机。</span></li></ol><h5 id='web组件base-starter-web'><span>Web组件：</span><code>base-starter-web</code></h5><p><span>对于web组件的定制主要基于Spring MVC的扩展点进行扩展。包含的定制内容包括Exception的定制、额外的注解支持、返回结果的统一维护等。</span></p><ol><li><span>Exception的定制，Java提供的Exception是基于类的，并且每个Exception结构各异，很不合适转换成统一的错误结构返回给前端。因此定制了统一个错误类</span><code>BaseException</code><span>：</span></li></ol><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="java"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1235.171875px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-variable">BaseException</span>(<span class="cm-meta">@Nullable</span> <span class="cm-variable">Throwable</span> <span class="cm-variable">ex</span>, <span class="cm-meta">@NonNull</span> <span class="cm-variable">Enum</span><span class="cm-operator">&lt;?&gt;</span> <span class="cm-variable">code</span>, <span class="cm-variable-3">Object</span>... <span class="cm-variable">args</span>){}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 34px;"></div><div class="CodeMirror-gutters" style="display: none; height: 34px;"></div></div></div></pre><p><span>Copy</span></p><p><span>该类接收一个起因</span><code>Throwable</code><span>，一个错误枚举值</span><code>code</code><span>以及错误转换的参数列表。其中</span><code>Enum</code><span>类用于代替原来通过类的方式定义错误，而是用一个枚举值代表一个错误码。并且对于枚举值的错误码进行了规范。枚举值直接代表默认的错误码消息模板，例如：</span><code>HTTP_ARGUMENTS_INVALID_</code><span>可以转换成</span><code>http arguments invalid {0}</code><span>；而</span><code>HTTP_ARGUMENTS_INVALID__</code><span>可以转换成</span><code>http arguments invalid {0} {1}</code><span>。通过下划线</span><code>_</code><span>来分隔单词，如果单词为空字符串则表示该位置需要填入一个参数。这种结构可以简化代码编写，并且直观的提供了错误码需要几个参数的表示。</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="java"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 1389.078125px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//表示该枚举类下面错误码默认的日志级别</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">@ErrorLevel</span>(<span class="cm-variable">ErrorLogLevel</span>.<span class="cm-variable">WARN</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">enum</span> <span class="cm-def">BaseErrorCode</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">//直接定义该错误码的日志级别</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-meta">@ErrorLevel</span>(<span class="cm-variable">ErrorLogLevel</span>.<span class="cm-variable">INFO</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">HTTP_ARGUMENTS_INVALID_</span>, <span class="cm-comment">//该错误码按照`_`做分隔，得到`http arguments invalid {0}`这样的消息模板。</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 238px;"></div><div class="CodeMirror-gutters" style="display: none; height: 238px;"></div></div></div></pre><p><span>Copy</span></p><ol><li><span>额外注解的支持：提供了诸如</span><code>@IpAddress</code><span>、</span><code>ClientInfo</code><span>等项目定制需求的定制。权限控制也在这里完成。</span></li><li><span>返回结果的统一维护，定制统一个返回值结构，兼容Spring MVC默认的返回结构。其中</span><code>result</code><span>字段用于返回正常的结果。</span></li></ol><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="java" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; min-width: 671.65625px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">@Data</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">@Builder</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">@JsonInclude</span>(<span class="cm-variable">JsonInclude</span>.<span class="cm-variable">Include</span>.<span class="cm-variable">NON_NULL</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">class</span> <span class="cm-def">Result</span><span class="cm-operator">&lt;</span><span class="cm-variable">E</span><span class="cm-operator">&gt;</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-3">String</span> <span class="cm-variable">traceId</span>; <span class="cm-comment">//链路跟踪ID</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable">Date</span> <span class="cm-variable">timestamp</span>; <span class="cm-comment">//服务端时间戳</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable">E</span> <span class="cm-variable">result</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable">PageValue</span> <span class="cm-variable">pageable</span>; <span class="cm-comment">//分页模式下的分页参数</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-3">String</span> <span class="cm-variable">message</span>; <span class="cm-comment">//错误消息</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-meta">@JsonIgnore</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-3">String</span> <span class="cm-variable">exception</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-meta">@JsonIgnore</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-3">String</span> <span class="cm-variable">error</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable">List</span><span class="cm-operator">&lt;</span><span class="cm-variable">FieldError</span><span class="cm-operator">&gt;</span> <span class="cm-variable">errors</span>; <span class="cm-comment">//字段错误消息</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-meta">@JsonIgnore</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-3">String</span> <span class="cm-variable">trace</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">private</span> <span class="cm-variable-3">Integer</span> <span class="cm-variable">status</span>; <span class="cm-comment">//http status code</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 612px;"></div><div class="CodeMirror-gutters" style="display: none; height: 612px;"></div></div></div></pre><p><span>Copy</span></p><h5 id='其他组件'><span>其他组件</span></h5><p><span>其他组件包括</span><code>cache</code><span>、</span><code>mq</code><span>等，在此不做详细描述。</span></p><h3 id='第三方starter'><span>第三方starter</span></h3><p><span>这里描述一下对接流程：</span></p><ol><li><span>完成对第三方API的签名验证工具类，添加测试。</span></li><li><span>完成通用HttpClient的代码结构。</span></li><li><span>批量完成对DTO的导入，可以通过SublimeText工具从原始文档进行文本处理转换。不建议挨个字段复制粘贴。</span></li><li><span>对接每一个API，提供最原始的XXRequest-&gt;XXResponse的方法对接。</span></li><li><span>完成第三方服务层Service，把错误码转换成合理的Exception（这里主要指BaseException）。</span></li><li><span>编写一定量的测试。</span></li></ol><p><span>完成对接后，业务项目依赖第三方starter，通过第三方服务层Service进行调用。</span></p><h3 id='代码规范'><span>代码规范</span></h3><p><span>采用PMD进行代码格式校验，可以方便的对代码进行格式规范。例如：字段、方法名字必须用camelCase，枚举值必须SNAKE_CASE；对if的嵌套层数限制。主要目的是规范代码、限制容易出错的书写方式（使得代码更易读、更安全）。</span></p><h3 id='git工作流'><span>Git工作流</span></h3><p><span>项目版本定义为1.2.3的格式，其中第一位数字是大版本号，用于重大版本升级；第二位数字是次版本号，用于每周一次的发布升级；第三位数字是HotFix版本号，用于修复线上问题时更新。</span></p><p><span>Git项目主分支为master，每周一进行版本cut，切出最新版本分支x.x-release，同时升级master分支版本到x.x+1.0。版本分支x.x-release主要用于本周问题修复。</span></p><p><span>SQL的版本跟随项目版本走，对于版本x.y.z的项目其SQL脚本必须是db/migration/Vx_y_z__sql_name.sql的格式，这样可以限定每个版本的SQL位置。每次进行版本升级之前，需要固定化当前版本的SQL，我提供了sqlFreeze的Gradle任务用来完成该功能。该任务会计算当前版本SQL的md5值，保存在特定的文本文件中，每次build的时候会对文本文件的md5值和历史版本SQL进行一一检查。如果发现不一致则编译失败，以此保证正常的开发不会因为误修改历史SQL文件而通过编译，合并进入主分支。</span></p><p><span>分支分成两类，master和x.x-release，分别用于最新代码分支和准备上线/已上线分支。 标签用于发布版本，格式为vx.y.z。</span></p><h3 id='ci和cd'><span>CI和CD</span></h3><p><span>持续集成和持续部署基于上述Git工作流采用Gitlab-ci工具完成。</span></p><ol><li><span>分支master对应开发环境。</span></li><li><span>标签vx.y.z对应测试环境。</span></li></ol><h5 id='持续集成'><span>持续集成</span></h5><p><span>Gradle任务需要提供一个专门针对gitlab-ci的任务，命名为</span><code>buildInCI</code><span>。其需要根据CI环境进行定制，并且完成比开发多一些的任务：</span></p><ol><li><span>普通build任务</span></li><li><span>运行测试任务</span></li><li><span>运行PMD任务进行代码校验</span></li><li><span>flyway刷SQL任务，需要附带启动一个数据库实例（参考Gitlab-ci的Service功能）</span></li></ol><h5 id='持续部署'><span>持续部署</span></h5><p><span>持续集成测试后，应当允许特定分支/标签的代码自动部署到开发测试环境。这里定义master分支自动部署到开发分支，标签版本vx.y.z自动部署到测试分支。</span></p><ol><li><span>开发环境的部署，不刷flyway，数据库Schema由开发者自行执行，不限制版本，可以随意部署最新的master版本。</span></li><li><span>测试环境的部署，需要刷flyway，数据库Schema通过版本管理进行维护，因此测试环境版本只能升不能降，自动部署需要拒绝版本号降低的情况。由于持续集成测试已经检验了SQL的正确性，因此这里可以自动化部署。但是需要注意的是测试环境数据库不能把Schema变更的权限开放给开发者，否则可能导致数据库Schema异常部署失败。</span></li></ol><p>&nbsp;</p></div></div>
+</body>
+</html>
