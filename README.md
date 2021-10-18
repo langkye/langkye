@@ -1,4 +1,4 @@
-### Hi there 👋
+<h3 style="text-align: center">Hi there 👋 </h3>
 
 **Here** are some ✨ special ✨ ideas to get you want::
 
